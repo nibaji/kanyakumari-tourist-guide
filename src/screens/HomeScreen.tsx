@@ -19,7 +19,7 @@ import {home} from './styles';
 const fetcher: Fetcher<dataListType> = (url: RequestInfo) =>
   fetch(url).then(res => res.json());
 
-type Props = NativeStackScreenProps<RootStackParamList, PLACE>;
+type Props = NativeStackScreenProps<RootStackParamList>;
 const HomeScreen = ({navigation}: Props) => {
   const {data, error, isLoading} = useSWR(
     'https://raw.githubusercontent.com/nibaji/kanyakumari-tourist-guide-data/main/places.json',
